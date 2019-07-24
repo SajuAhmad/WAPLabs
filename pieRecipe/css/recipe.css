@@ -1,0 +1,112 @@
+body {
+    max-width: 1024px;
+    max-height: 768px;
+    margin: 0 auto;
+    padding: 5px;
+    font-size:  11pt;
+    font-family: Georgia, sans-serif, "Times New Roman";
+}
+
+
+
+h1 {
+    background-color: #F0F0F0;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+    color: #A4A400;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    background-color: #F0F0F0;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+    text-align: left;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #A4A400;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 15px 0 10px 0;
+}
+
+section h6 {
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul{
+    padding-left: 0;
+}
+
+#menu ul li{
+    list-style: none;
+}
+
+#ingredients span{
+    text-decoration: underline;
+}
+
+#directions ul {
+    list-style: decimal;
+}
+
+#directions ul li ul{
+    list-style: circle;
+}
+
+#directions span{
+    font-weight: bold;
+}
+
+#user-comment p{
+    margin: 10px 40px 10px 40px;
+    background-color: #ffffa8;
+}
+
+#user-comment span{
+    display: block;
+}
+
+#user-comment .username{
+    padding-top: 20px;
+}
+
+#footer div {
+    width: 100%;
+    height: 40px;
+}
+
+#footer img {
+    float: right;
+}
+
+#footer .text {
+    width: 230px;
+    height: auto;
+    float: right;
+}
+
+#footer .footer-links{
+    color: #a4a400;
+}
+
+#footer .text span:first-child{
+    padding-left: 10px;
+}
+
+#footer .text #second{
+    padding-left: 41px;
+}
+
+#footer .text span:last-child{
+    padding-left: 100px;
+}

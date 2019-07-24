@@ -1,0 +1,84 @@
+body {
+    max-width: 1024px;
+    max-height: 768px;
+    margin: 0 auto;
+    font-family: "sans-serif", "Times New Roman", "Lucida Sans";
+}
+
+#about-me {
+    background-color: #5a5547;
+    padding: 5px;
+}
+
+.overview-info {
+    margin: 5px;
+    padding: 0;
+}
+
+#about-heading {
+    margin: 5px 0 50px 0;
+    color: #9db0c2;
+    padding: 0;
+}
+
+#about-me p {
+    color: white;
+}
+
+.cheerful {
+    color: #e0d99b;
+}
+
+hr {
+    border-color: #b8b3a7;
+}
+
+.h3-heading {
+    margin: 5px 0 20px 0;
+    padding: 0;
+    color: #9db0c2;
+}
+
+#classes {
+    color: white;
+}
+
+#movies-note {
+    margin: 0;
+    padding: 0;
+}
+
+#movie-list {
+    color: white;
+}
+
+#movie-list a {
+    text-decoration: none;
+    color: red;
+}
+
+#movie-list a:hover {
+    color: red;
+    display: inline-block;
+    background: antiquewhite;
+}
+
+figure {
+    display: inline-block;
+    margin: 0;
+    color: white;
+}
+
+.modepic {
+    width: 350px;
+    height: 350px;
+}
+
+#validation {
+    width: 100%;
+    height: 40px;
+}
+
+#validation img{
+    float: right;
+}
