@@ -1,0 +1,26 @@
+.heading {
+    background-color: #add8e6;
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.nav li {
+    float: left;
+    border-right: 1px solid black;
+}
+
+.nav li a:hover {
+    background-color: #111;
+}
+
+.col1, .col2, .col3 {
+    height: 30vw;
+}
+
+.footer {
+    background-color: #2f4f4f;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
