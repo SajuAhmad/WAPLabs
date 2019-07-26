@@ -1,9 +1,12 @@
+/* this file contains all the CSS style needed for tmnt.html*/
+
 body {
     background-image: url("../img/background.png");
     font-size: 8pt;
     font-family: Verdana Tahoma sans-serif;
-    margin:  0;
+    margin: 0;
     padding: 0;
+    position: relative;
 }
 
 #banner-img {
@@ -13,38 +16,47 @@ body {
     text-align: center;
 }
 
-#heading{
+#heading {
     font-size: 24pt;
     font-weight: bold;
     text-align: center;
     text-shadow: 3px 3px #999999;
 }
 
-#main-div{
+#wrapper {
     width: 800px;
+    height: auto;
     margin: 0 auto;
     padding: 0;
     border: 4px solid gray;
     border-radius: 20px;
     overflow: hidden;
     box-sizing: border-box;
+    position: relative;
 }
 
-#inner-left{
+#main-div {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#inner-left {
     width: 68.8%;
+    height: 100%;
 }
 
-#inner-banner{
+#inner-banner {
     width: 100%;
     height: 83px;
     background-image: url("../img/rbg.png");
 }
 
-#inner-banner img{
+#inner-banner img {
     float: left;
 }
 
-#inner-banner span p{
+#inner-banner p {
     font-size: 48pt;
     font-weight: bold;
     color: red;
@@ -52,11 +64,27 @@ body {
     padding-top: 5px;
 }
 
-#column{
-    column-count: 2;
-    column-gap: 2%;
+#columns {
+    padding: 10px;
+}
+
+#column-left {
+    width: 47%;
+    height: 100%;
+    float: left;
+}
+
+#column-right {
+    width: 47%;
+    height: 100%;
+    float: right;
+}
+
+.comment {
+    width: 100%;
     height: auto;
-    padding: 5px;
+    margin-bottom: 20px;
+    clear: both;
 }
 
 .review {
@@ -66,43 +94,82 @@ body {
     padding: 8px;
     width: auto;
     height: auto;
+    min-height: 25px;
 }
 
-.review img{
+.review img {
     float: left;
+    margin-right: 5px;
 }
-.review p{
+
+.review p {
     padding: 0;
     margin: 0;
 }
 
-.author{
-    margin-bottom: 20px;
+.author {
+    width: 100%;
+    min-height: 25px;
 }
 
-.author img{
+.author img {
     float: left;
     padding-right: 5px;
 }
 
-#inner-footer {
+.space {
     width: 100%;
-    height: 30px;
-    position: relative;
+    height: 20px;
+    clear: left;
+}
+
+#inner-footer {
+    text-align: center;
+    width: 100%;
+    background-color: #A2B964;
+    position: absolute;
     bottom: 0;
 }
 
-#right-inner{
+#inner-footer p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+#right-inner {
     width: 250px;
     float: right;
     box-sizing: border-box;
     background-color: #A2B964;
 }
 
-#right-inner img{
+#right-inner img {
     width: 100%;
 }
 
-#right-inner dl{
+#right-inner dl {
     padding: 10px;
+}
+
+#right-inner dt {
+    font-weight: bold;
+}
+
+#right-inner dd {
+    margin-bottom: 10pt;
+}
+
+#right-inner dd ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#validator {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#validator img {
+    opacity: 0.5;
 }

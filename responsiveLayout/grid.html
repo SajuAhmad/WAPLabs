@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--HTML structure for responsive BS grid design-->
+<head>
+    <meta charset="utf-8"/>
+    <title>grid desing</title>
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row bg-info my-row">
+        <div class="col text-center mx-auto heading">Header</div>
+    </div>
+    <div class="row bg-dark my-row">
+        <div class="col my-col">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Menu1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Menu2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Menu3</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-3 order-md-1 order-sm-1 bg-secondary text-white col1">Column1</div>
+        <div class="col-sm-12 col-md-6  order-md-2 order-sm-3 bg-info text-white col2">Column2</div>
+        <div class="col-sm-6 col-md-3 order-md-3 order-sm-2 bg-success text-white col3">Column3</div>
+    </div>
+    <div class="row">
+        <div class="col text-center text-white mx-auto footer">Header</div>
+    </div>
+</div>
+</body>
+</html>
