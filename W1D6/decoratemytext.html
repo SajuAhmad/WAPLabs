@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <title>Text Decorator</title>
-    <link href="decoratemytext.css" type="text/css" rel="stylesheet"/>
-
     <!--
     This is a widely-used JavaScript library named jQuery that has
     many useful functions which we need.
@@ -18,9 +16,9 @@
 
 <body>
 <h1>Text Decorator</h1>
-
+<!-- Your UI controls go here -->
 <div>
-    <img src="decorated.gif" alt="very decorated!"/>
+    <img src="img/decorated.gif" alt="very decorated!"/>
     <fieldset>
         <legend>Text</legend>
         <textarea id="textarea" name="message" rows="4" cols="30">Enter your text here...</textarea>
@@ -28,12 +26,16 @@
 
     <fieldset>
         <legend>Decoration</legend>
-        <input id="DecorationButton" type="button" value="Bigger Decorations!" name="DecorationButton" /> <br/>
-        <input type="checkbox" id="Bling" value="Bling" onchange="popup2()"> <label for="Bling">Bling</label>
+        <input id="DecorationButton" type="button" value="Bigger Decorations!" name="DecorationButton" />
+        <input id="igpay" type="button" value="Igpay Atinlay" name="IgpayAtinlay" />
+        <input id="malkovich" type="button" value="Malkovitch" name="Malkovitch" /> <br/>
+        <input type="checkbox" id="bling" value="Bling"> <label for="Bling">Bling</label>
     </fieldset>
 </div>
-
-<!-- Your UI controls go here -->
+<div id="validator">
+    <a href="https://validator.w3.org/check/referer" target="_blank"><img src="./img/w3c-html.png" alt="Valid HTML5"/></a> <br/>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img src="./img/w3c-css.png" alt="Valid CSS"/></a>
+</div>
 
 </body>
 </html>
