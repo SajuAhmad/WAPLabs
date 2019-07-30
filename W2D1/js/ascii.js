@@ -9,7 +9,7 @@ window.onload = function () {
     FONTSIZE.XXL = "32pt";
 
     let frames = [];
-    let currentFrame = 0, turboMode, startAmimation, started = 0;
+    let currentFrame = 0, turboMode, startAmimation, started = 0, animationType = "BLANK";
 
     const textarea = document.getElementById("text-area");
     const start = document.getElementById("start");
@@ -21,7 +21,7 @@ window.onload = function () {
     animation.onchange = selectAnimation;
 
     function selectAnimation() {
-        const animationType = animation.options[animation.selectedIndex].text.toUpperCase();
+        animationType = animation.options[animation.selectedIndex].text.toUpperCase();
         textarea.value = ANIMATIONS[animationType];
         frames = ANIMATIONS[animation.options[animation.selectedIndex].text.toUpperCase()].split("=====\n");
         currentFrame = 0;
@@ -35,11 +35,13 @@ window.onload = function () {
     }
 
     start.onclick = () => {
-        started = 1;
-        startAmimation = setInterval(doAnimation, 250);
-        start.disabled = true;
-        animation.disabled = true;
-        stop.disabled = false;
+        if (animationType !== "BLANK") {
+            started = 1;
+            startAmimation = setInterval(doAnimation, 250);
+            start.disabled = true;
+            animation.disabled = true;
+            stop.disabled = false;
+        }
     };
 
     stop.onclick = () => {
