@@ -9,7 +9,7 @@ window.onload = function () {
     FONTSIZE.XXL = "32pt";
 
     let frames = [];
-    let currentFrame = 0, turboMode, stopAmimation;
+    let currentFrame = 0, turboMode, startAmimation, started = 0;
 
     const textarea = document.getElementById("text-area");
     const start = document.getElementById("start");
@@ -35,14 +35,16 @@ window.onload = function () {
     }
 
     start.onclick = () => {
-        stopAmimation = setInterval(doAnimation, 250);
+        started = 1;
+        startAmimation = setInterval(doAnimation, 250);
         start.disabled = true;
         animation.disabled = true;
         stop.disabled = false;
     };
 
     stop.onclick = () => {
-        clearInterval(stopAmimation);
+        started = 0;
+        clearInterval(startAmimation);
         clearInterval(turboMode);
         start.disabled = false;
         animation.disabled = false;
@@ -51,7 +53,7 @@ window.onload = function () {
     };
 
     turbo.onchange = () => {
-        if (turbo.checked === true)
+        if (started === 1 && turbo.checked === true)
             turboMode = setInterval(doAnimation, 50);
         else
             clearInterval(turboMode);
