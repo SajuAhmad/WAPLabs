@@ -9,7 +9,7 @@ window.onload = function () {
     FONTSIZE.XXL = "32pt";
 
     let frames = [];
-    let currentFrame = 0, turboMode, startAmimation, started = 0, animationType = "BLANK";
+    let currentFrame = 0, turboInterval, normalInterval, started = 0, animationType = "BLANK";
 
     const textarea = document.getElementById("text-area");
     const start = document.getElementById("start");
@@ -35,31 +35,44 @@ window.onload = function () {
     }
 
     start.onclick = () => {
+        if (turbo.checked === true) {
+            startAnimation();
+            turboSpeed();
+        } else {
+            startAnimation();
+        }
+    };
+
+    function startAnimation() {
         if (animationType !== "BLANK") {
             started = 1;
-            startAmimation = setInterval(doAnimation, 250);
+            normalInterval = setInterval(doAnimation, 250);
             start.disabled = true;
             animation.disabled = true;
             stop.disabled = false;
         }
-    };
+    }
 
-    stop.onclick = () => {
+    stop.onclick = stopAnimation;
+
+    function stopAnimation() {
         started = 0;
-        clearInterval(startAmimation);
-        clearInterval(turboMode);
+        clearInterval(normalInterval);
+        clearInterval(turboInterval);
         start.disabled = false;
         animation.disabled = false;
         stop.disabled = true;
         selectAnimation();
-    };
+    }
 
-    turbo.onchange = () => {
+    turbo.onchange = turboSpeed;
+
+    function turboSpeed() {
         if (started === 1 && turbo.checked === true)
-            turboMode = setInterval(doAnimation, 50);
+            turboInterval = setInterval(doAnimation, 50);
         else
-            clearInterval(turboMode);
-    };
+            clearInterval(turboInterval);
+    }
 
     function doAnimation() {
         textarea.value = frames[currentFrame++];
