@@ -1,5 +1,6 @@
 window.onload = function () {
     "use strict";
+
     let FONTSIZE = [];
     FONTSIZE.TINY = "7pt";
     FONTSIZE.SMALL = "10pt";
@@ -68,10 +69,11 @@ window.onload = function () {
     turbo.onchange = turboSpeed;
 
     function turboSpeed() {
-        if (started === 1 && turbo.checked === true)
+        if (started === 1 && turbo.checked === true) {
             turboInterval = setInterval(doAnimation, 50);
-        else
+        } else {
             clearInterval(turboInterval);
+        }
     }
 
     function doAnimation() {
@@ -80,5 +82,4 @@ window.onload = function () {
             currentFrame = 0;
         }
     }
-}
-;
+};
