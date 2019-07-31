@@ -23,8 +23,8 @@ window.onload = function () {
 
     function selectAnimation() {
         animationType = animation.options[animation.selectedIndex].text.toUpperCase();
-        textarea.value = ANIMATIONS[animationType];
-        frames = ANIMATIONS[animation.options[animation.selectedIndex].text.toUpperCase()].split("=====\n");
+        textarea.value = ANIMATIONS[animationType]; //jshint ignore:line
+        frames = ANIMATIONS[animation.options[animation.selectedIndex].text.toUpperCase()].split("=====\n"); //jshint ignore:line
         currentFrame = 0;
     }
 
