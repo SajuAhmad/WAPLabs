@@ -10,6 +10,7 @@
         }
 
         console.log("Problem 1:");
+
         // reverse and return as new array
         function reverseArray(array) {
             let resultArr = [], idx = -1;
@@ -19,18 +20,20 @@
             }
             return resultArr;
         }
+
         console.log(reverseArray(["A", "B", "C"]));
         console.log("Expected output of reverseArray([\"A\", \"B\", \"C\"]) is [\"C\",\"B\",\"A\"]  " + myFunctionTest("C,B,A", function () {
             return reverseArray(["A", "B", "C"]).toString();
         }));
 
         let arrayValue = [1, 2, 3, 4, 5];
+
         // reverse the original array and return it
         function reverseArrayInPlace(arr) {
             let len = arr.length, last = len;
             for (let i = 0; i <= len / 2; i++) {
-                let temp = arr[i];
                 if (last !== len / 2) {
+                    let temp = arr[i];
                     arr[i] = arr[--last];
                     arr[last] = temp;
                 } else {
@@ -47,6 +50,7 @@
         console.log("\n");
 
         console.log("Problem 2:");
+
         // add element to the beginning of the list
         function prepend(element, list) {
             return {value: element, rest: list};
@@ -60,6 +64,7 @@
             }
             return list;
         }
+
         console.log(arrayToList([10, 20]));
 
         // convert list to array
@@ -71,6 +76,7 @@
             }
             return array;
         }
+
         console.log(listToArray(arrayToList([10, 20, 30])));
         console.log("Expected output of listToArray(arrayToList([10, 20, 30])) is [10, 20, 30]  " + myFunctionTest("10,20,30", function () {
             return listToArray(arrayToList([10, 20, 30])).toString();
@@ -87,8 +93,9 @@
                 }
                 pos++;
             }
-            return "undefined";
+            return undefined;
         }
+
         console.log(nth(arrayToList([10, 20, 30]), 1));
         console.log("Expected output of nth(arrayToList([10, 20, 30]), 1) is 20  " + myFunctionTest(20, function () {
             return nth(arrayToList([10, 20, 30]), 1);
@@ -100,13 +107,14 @@
         // return the value of nth element recursively
         function recursiveNth(list, position, index) {
             if (list === null) {
-                return "undefined";
+                return undefined;
             }
             if (index === position) {
                 return list.value;
             }
             return recursiveNth(list.rest, position, index + 1);
         }
+
         console.log(recursiveNth(arrayToList([10, 20, 30]), 1, 0));
         console.log("Expected output of recursiveNth(arrayToList([10, 20, 30]), 1, 0) is 20  " + myFunctionTest(20, function () {
             return recursiveNth(arrayToList([10, 20, 30]), 1, 0);
@@ -119,6 +127,7 @@
         console.log("Problem 3:");
 
         let obj = {here: {is: "an"}, object: 2};
+
         // compare two objects
         function deepEqual(obj1, obj2) {
             if (obj1 !== null && obj2 !== null) {

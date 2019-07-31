@@ -1,6 +1,5 @@
 window.onload = function() {
     "use strict";
-
     const decorationButton = document.getElementById("DecorationButton");
     const checkbox = document.getElementById("bling");
     const textarea = document.getElementById("textarea");
