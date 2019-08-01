@@ -98,7 +98,7 @@
             this.age = age;
         }
 
-        static species() {
+        species() {
             return "homo sapien";
         }
 
@@ -208,11 +208,11 @@
             this.age = age;
         }
 
-        static greetings() {
+        greetings() {
             return "Greetings, my name is " + this.name + " and I am " + this.age + " years old.";
         }
 
-        static salute() {
+        salute() {
             return "Good morning!, and in case I dont see you, good afternoon, good evening and good night!";
         }
     }
@@ -223,7 +223,7 @@
             this.major = major;
         }
 
-        static greetings() {
+        greetings() {
             return "Hay, my name is " + this.name + " and I am studying " + this.major;
         }
     }
@@ -234,7 +234,7 @@
             this.department = department;
         }
 
-        static greetings() {
+        greetings() {
             return "Good day, my name is " + this.name + " and I am in " + this.department + " department.";
         }
     }
