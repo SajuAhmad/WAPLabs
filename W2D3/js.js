@@ -57,7 +57,7 @@
 
     console.log(t11.teach("WAP"));
     console.log(t12.teach("WAA"));
-    console.log(Person3.species());
+    console.log(t12.species());
     console.log(p11.favoriteHobby("Fishing"));
     console.log("\n");
 
@@ -98,7 +98,7 @@
             this.age = age;
         }
 
-        species() {
+        static species() {
             return "homo sapien";
         }
 
@@ -123,7 +123,7 @@
 
     console.log(t31.teach("WAP"));
     console.log(t32.teach("WAA"));
-    console.log(Person3.species());
+    console.log(t32.species());
     console.log(p31.favoriteHobby("Fishing"));
     console.log("\n");
 
@@ -193,9 +193,9 @@
     const st = new Student2("Saju", 29, "CS");
     const prof = new Professor2("Prof. K. Levi", 60, "CSE");
     console.log(st.greetings());
-    console.log(Person6.salute());
+    console.log(st.salute());
     console.log(prof.greetings());
-    console.log(Person6.salute());
+    console.log(prof.salute());
     console.log("\n");
 
 
@@ -208,11 +208,11 @@
             this.age = age;
         }
 
-        greetings(hobby) {
+        static greetings() {
             return "Greetings, my name is " + this.name + " and I am " + this.age + " years old.";
         }
 
-        salute() {
+        static salute() {
             return "Good morning!, and in case I dont see you, good afternoon, good evening and good night!";
         }
     }
@@ -223,7 +223,7 @@
             this.major = major;
         }
 
-        greetings(hobby) {
+        static greetings() {
             return "Hay, my name is " + this.name + " and I am studying " + this.major;
         }
     }
@@ -234,7 +234,7 @@
             this.department = department;
         }
 
-        greetings(hobby) {
+        static greetings() {
             return "Good day, my name is " + this.name + " and I am in " + this.department + " department.";
         }
     }
@@ -242,9 +242,9 @@
     const st1 = new Student3("Saju", 29, "CS");
     const prof1 = new Professor3("Prof. K. Levi", 60, "CSE");
     console.log(st1.greetings());
-    console.log(Person6.salute());
+    console.log(st1.salute());
     console.log(prof1.greetings());
-    console.log(Person6.salute());
+    console.log(prof1.salute());
     console.log("\n");
 
 })();
