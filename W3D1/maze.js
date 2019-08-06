@@ -22,7 +22,7 @@ $(function () {
     $("#end").mouseover(function () {
         if (result === true) {
             $("#status").text('You win! :]');
-        } else if (result === false){
+        } else if (result === false) {
             $("#status").text('You lose! :[');
         }
     });
