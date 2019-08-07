@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <title>Clean Screen</title>
     <link href="style.css" rel="stylesheet">
-    <script src="jquery-3.4.1.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+    </script>
     <script src="js.js"></script>
 </head>
 <body>
 <div id="setting">
-    <label><span class="label">Width: </span> <input name="width" type="text" id="width"></label><br/>
-    <label><span class="label">Growth Amount: </span><input name="growAmount" type="text" id="growAmount"></label><br/>
-    <label><span class="label">Grow Rate: </span><input name="growRate" type="text" id="growRate"></label> <br/>
-    <label><input name="settingBtn" type="button" id="settingBtn" value="Apply"></label>
+    <label><span class="label">Width: </span> <input name="width" type="text" id="width" placeholder="Default: 50px"></label><br/>
+    <label><span class="label">Growth Amount: </span><input name="growAmount" type="text" id="growAmount" placeholder="Default: 10px"></label><br/>
+    <label><span class="label">Grow Rate: </span><input name="growRate" type="text" id="growRate" placeholder="Default: 250ms"></label> <br/>
+    <label><span class="label">Number Circles: </span> <input name="circle" type="text" id="numOfCircle" placeholder="Default: 5"></label><br/>
+    <label><input name="settingBtn" type="button" id="settingBtn" value="Start"></label>
 </div>
 <div id="bubbleField">
 </div>
